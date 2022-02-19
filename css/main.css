@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #151515;
+}
+.wave1{
+    position: relative;
+    width: 300px;
+    height: 50px;
+    background: #151515;
+    overflow: hidden;
+}
+.wave1::before{
+    content: 'xxxxxxxxxxxxxxx';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    font-size: 4rem;
+    color: transparent;
+    text-decoration-style: wavy;
+    text-decoration-color: #00ff1f;
+    text-decoration-line: underline;
+    animation: waveMove1 1s linear infinite;
+}
+@keyframes waveMove1 {
+    0%{
+        transform: translateX(-1px);
+    }
+    100%{
+        transform: translateX(-100px);
+    }
+}
+.wave2{
+    position: relative;
+    width: 300px;
+    height: 50px;
+    background: #151515;
+    overflow: hidden;
+}
+.wave2::before{
+    content: 'xxxxxxxxxxxxxxx';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    font-size: 4rem;
+    color: transparent;
+    text-decoration-style: wavy;
+    text-decoration-color: #f70202;
+    text-decoration-line: underline;
+    animation: waveMove2 1s linear infinite;
+}
+@keyframes waveMove2 {
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(-1px);
+    }
+}
+.loader-text{
+    color: #fff;
+    font-size: 2rem;
+}
